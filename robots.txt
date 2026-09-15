@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dipakraj3050.github.io/deepak-portfolio/sitemap.xml
