@@ -5,195 +5,218 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Deepak Kumar Thakur | PikaGo_World</title>
 <meta name="description" content="Deepak Kumar Thakur — Developer, Entrepreneur and creator of PikaGo_World.">
+<meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#050816;--panel:rgba(13,18,38,.68);--line:rgba(255,255,255,.10);
-  --text:#f8fafc;--muted:#a8b1c7;--a:#6d7cff;--b:#a855f7;--c:#ec4899;
-}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 20% 10%,#17204b 0,transparent 35%),radial-gradient(circle at 85% 20%,#32144c 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
-body.light{--bg:#f5f7ff;--panel:rgba(255,255,255,.72);--line:rgba(15,23,42,.10);--text:#101827;--muted:#5d6679}
-body.light .nav{background:rgba(245,247,255,.82)}
+:root{--bg:#050816;--panel:rgba(13,18,38,.68);--line:rgba(255,255,255,.1);--text:#f8fafc;--muted:#a8b1c7;--a:#6d7cff;--b:#a855f7;--c:#ec4899}
+*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 10%,#17204b 0,transparent 35%),radial-gradient(circle at 85% 20%,#32144c 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+body.light{--bg:#f5f7ff;--panel:rgba(255,255,255,.72);--line:rgba(15,23,42,.1);--text:#101827;--muted:#5d6679}
 a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
 .nav{position:fixed;z-index:100;top:0;left:0;width:100%;background:rgba(5,8,22,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700;letter-spacing:.5px}
-.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--a),var(--b),var(--c));font-size:19px;box-shadow:0 0 30px #6d7cff55}
-.links{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:14px;font-weight:600}.links a:hover{color:var(--text)}
-.actions{display:flex;gap:9px;align-items:center}.icon-btn,.menu-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);width:42px;height:42px;border-radius:12px;cursor:pointer}
-.menu-btn{display:none}.hero{min-height:100vh;padding:130px 0 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid #6d7cff55;background:#6d7cff12;border-radius:999px;color:#b8c0ff;font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
-.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 15px #34d399}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif}h1{font-size:clamp(44px,6vw,76px);line-height:1.02;margin:22px 0 20px;letter-spacing:-3px}
-.gradient{background:linear-gradient(100deg,#fff,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:18px;line-height:1.8;color:var(--muted);max-width:650px}.typing{color:var(--text);font-weight:800;border-right:2px solid var(--c);padding-right:4px}
-.cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 20px;border-radius:14px;font-weight:800;border:1px solid var(--line);transition:.25s;cursor:pointer}.btn.primary{background:linear-gradient(100deg,var(--a),var(--b),var(--c));box-shadow:0 15px 40px #6d7cff2b}.btn.secondary{background:var(--panel)}.btn:hover{transform:translateY(-3px)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700}.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--a),var(--b),var(--c));font-size:19px}.links{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:14px;font-weight:600}.links a:hover{color:var(--text)}
+.actions{display:flex;gap:9px}.icon-btn,.menu-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);width:42px;height:42px;border-radius:12px;cursor:pointer}.menu-btn{display:none}
+.hero{min-height:100vh;padding:130px 0 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}.hero-copy{min-width:0}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid #6d7cff55;background:#6d7cff12;border-radius:999px;color:#b8c0ff;font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 15px #34d399}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif}h1{font-size:clamp(44px,6vw,76px);line-height:1.02;margin:22px 0 20px;letter-spacing:-3px}.gradient{background:linear-gradient(100deg,#fff,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;line-height:1.8;color:var(--muted);max-width:650px}.typing{color:var(--text);font-weight:800;border-right:2px solid var(--c);padding-right:4px}.cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 20px;border-radius:14px;font-weight:800;border:1px solid var(--line);transition:.25s;cursor:pointer}.btn.primary{background:linear-gradient(100deg,var(--a),var(--b),var(--c));color:white}.btn.secondary{background:var(--panel)}.btn:hover{transform:translateY(-3px)}
 .stats{display:flex;gap:35px;margin-top:38px;padding-top:24px;border-top:1px solid var(--line)}.stat strong{display:block;font:700 29px "Space Grotesk"}.stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-.hero-photo{position:relative;max-width:500px;margin:auto}.photo-wrap{position:relative;aspect-ratio:1/1;padding:9px;border-radius:34px;background:linear-gradient(135deg,#6d7cff,transparent 45%,#ec4899);box-shadow:0 30px 100px #0008}
-.photo-wrap{position:relative;aspect-ratio:1/1;padding:0;border-radius:34px;overflow:hidden;background:linear-gradient(135deg,#6d7cff,transparent 45%,#ec4899);box-shadow:0 30px 100px #0008}
-.photo-wrap img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center;border-radius:34px}
+.hero-photo{position:relative;max-width:500px;margin:auto;width:100%}.photo-wrap{position:relative;aspect-ratio:1/1;border-radius:34px;overflow:hidden;background:linear-gradient(135deg,#6d7cff,transparent 45%,#ec4899);box-shadow:0 30px 100px #0008}.photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:34px}
 .float{position:absolute;background:rgba(8,12,30,.86);backdrop-filter:blur(15px);border:1px solid var(--line);padding:13px 16px;border-radius:17px;box-shadow:0 18px 50px #0007}.f1{left:-25px;bottom:35px}.f2{right:-25px;top:30px}.float small{display:block;color:var(--muted);font-size:10px}.float b{font-size:13px}
-.update-hero{position:relative;overflow:hidden;min-height:280px;display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:stretch}.update-hero .update-copy{position:relative;z-index:2}.update-hero .update-image{min-height:250px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#111936,#24133a);position:relative}.update-hero .update-image img{width:100%;height:100%;display:block;object-fit:cover}.update-hero .update-image.noimg{display:grid;place-items:center;font-size:80px}.update-date{font-size:12px;color:var(--muted);margin-top:18px}.qa-list{display:grid;gap:14px;margin-top:25px}.qa-item{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.qa-item p{margin:7px 0}.qa-answer{margin-top:12px;padding:14px;border-left:3px solid var(--a);background:#ffffff08;border-radius:10px}.project-img{height:190px;border-radius:18px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#111936,#24133a);font-size:65px}.project-img img{width:100%;height:100%;object-fit:cover;display:block}@media(max-width:800px){.update-hero{grid-template-columns:1fr}.update-hero .update-image{min-height:190px}.project-img{height:170px}}
-section{padding:100px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 50px}.kicker{color:#9ca8ff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-size:42px;margin:9px 0}.section-head p{color:var(--muted);line-height:1.7}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:28px;backdrop-filter:blur(18px);box-shadow:0 20px 60px #0003;transition:.3s}.card:hover{transform:translateY(-7px);border-color:#7b84ff55}
-.card h3{margin:0 0 12px;font-size:23px}.card p{color:var(--muted);line-height:1.75;margin:0 0 16px}
-.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:11px;color:#cbd2e8;background:#ffffff08;border:1px solid var(--line);padding:7px 10px;border-radius:999px}
-.skill{margin:18px 0}.skill-top{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:8px}.bar{height:9px;background:#ffffff0c;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--a),var(--b),var(--c));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+section{padding:100px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 50px}.kicker{color:#9ca8ff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-size:42px;margin:9px 0}.section-head p{color:var(--muted);line-height:1.7}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:28px;backdrop-filter:blur(18px);box-shadow:0 20px 60px #0003;transition:.3s}.card:hover{transform:translateY(-5px);border-color:#7b84ff55}.card h3{margin:0 0 12px;font-size:23px}.card p{color:var(--muted);line-height:1.75}.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:11px;color:#cbd2e8;background:#ffffff08;border:1px solid var(--line);padding:7px 10px;border-radius:999px}
 .company{position:relative;overflow:hidden}.company:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#6d7cff22;filter:blur(40px);right:-80px;top:-100px}
-.project-toolbar{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:25px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 13px;border-radius:11px;cursor:pointer}.filter.active{color:white;background:#6d7cff}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{overflow:hidden;padding:0}.project-img{height:180px;display:grid;place-items:center;background:linear-gradient(135deg,#111b4d,#29114a);font-size:50px}.project-body{padding:23px}.project-body h3{margin:0 0 9px}.project-body p{font-size:13px;color:var(--muted);line-height:1.65}.project.hide{display:none}
-.timeline{position:relative;max-width:850px;margin:auto}.timeline:before{content:"";position:absolute;left:13px;top:0;bottom:0;width:2px;background:linear-gradient(var(--a),var(--c));opacity:.5}.event{position:relative;padding-left:48px;margin:0 0 28px}.event:before{content:"";position:absolute;left:7px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 20px #6d7cff}.event .date{color:#9ca8ff;font-size:11px;font-weight:800;letter-spacing:1px}.event h3{margin:6px 0;font-size:20px}.event p{color:var(--muted);line-height:1.6;margin:0}
-.contact{max-width:800px;margin:auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}input,textarea{width:100%;padding:14px 15px;border-radius:13px;border:1px solid var(--line);background:#ffffff06;color:var(--text);outline:none;font:inherit}textarea{resize:vertical;min-height:145px}.field{margin-bottom:15px}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;margin:0 0 7px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{overflow:hidden;padding:0}.project-img{height:180px;display:grid;place-items:center;background:linear-gradient(135deg,#111b4d,#29114a);font-size:50px;overflow:hidden}.project-img img{width:100%;height:100%;object-fit:cover;display:block}.project-body{padding:23px}.project-body h3{margin:0 0 9px}.project-body p{font-size:13px;color:var(--muted);line-height:1.65}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.project-toolbar{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:25px}.filter{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 13px;border-radius:11px;cursor:pointer}.filter.active{color:white;background:#6d7cff}
+.timeline{position:relative;max-width:850px;margin:auto}.timeline:before{content:"";position:absolute;left:13px;top:0;bottom:0;width:2px;background:linear-gradient(var(--a),var(--c));opacity:.5}.event{position:relative;padding-left:48px;margin:0 0 28px}.event:before{content:"";position:absolute;left:7px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 20px #6d7cff}.event .date{color:#9ca8ff;font-size:11px;font-weight:800}.event h3{margin:6px 0;font-size:20px}.event p{color:var(--muted);line-height:1.6}
+.ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.ach-card{display:flex;gap:14px;align-items:flex-start}.ach-icon{width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--a),var(--b))}.ach-card h3{margin:0 0 6px;font-size:17px}.ach-card .date{color:#9ca8ff;font-size:11px;font-weight:800}.ach-card p{margin:6px 0 0;color:var(--muted);line-height:1.6;font-size:14px}
+.contact{max-width:800px;margin:auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}input,textarea{width:100%;padding:14px 15px;border-radius:13px;border:1px solid var(--line);background:#ffffff06;color:var(--text);outline:none;font:inherit}textarea{resize:vertical;min-height:145px}.field{margin-bottom:15px}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;margin-bottom:7px}
+.update-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:stretch}.update-image{min-height:250px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#111936,#24133a);display:grid;place-items:center;font-size:70px}.update-image img{width:100%;height:100%;object-fit:cover}.update-date{font-size:12px;color:var(--muted);margin-top:18px}
+.qa-list{display:grid;gap:14px;margin-top:25px}.qa-item{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.qa-item p{margin:7px 0}.qa-answer{margin-top:12px;padding:14px;border-left:3px solid var(--a);background:#ffffff08;border-radius:10px}
+.announce{display:none;position:sticky;top:76px;z-index:99;background:linear-gradient(100deg,var(--a),var(--b),var(--c));color:white}.announce.show{display:block}.announce-inner{padding:10px 0;text-align:center;font-weight:700}.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}.toast{position:fixed;right:20px;bottom:20px;background:#10172c;color:white;border:1px solid var(--line);padding:13px 16px;border-radius:13px;transform:translateY(120px);opacity:0;transition:.3s;z-index:200}.toast.show{transform:none;opacity:1}.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:200}
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
-.announce{display:none;position:sticky;top:76px;z-index:99;background:linear-gradient(100deg,var(--a),var(--b),var(--c));color:#fff}.announce.show{display:block}.announce-inner{padding:10px 0;font-size:13px;font-weight:700;text-align:center}
-.ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.ach-card{display:flex;gap:14px;align-items:flex-start}.ach-icon{width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;font-size:20px;background:linear-gradient(135deg,var(--a),var(--b))}.ach-card h3{margin:0 0 6px;font-size:17px}.ach-card .date{color:#9ca8ff;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.ach-card p{margin:6px 0 0;color:var(--muted);line-height:1.6;font-size:14px}
-.qa-status{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:4px 9px;border-radius:999px;display:inline-block;margin-bottom:8px}.qa-status.pend{background:#f59e0b18;color:#ffd38a}.qa-status.ans{background:#34d39918;color:#8ff0c5}
-@media(max-width:700px){.ach-grid{grid-template-columns:1fr}}
-.toast{position:fixed;right:20px;bottom:20px;background:#10172c;color:white;border:1px solid var(--line);padding:13px 16px;border-radius:13px;transform:translateY(120px);opacity:0;transition:.3s;z-index:200}.toast.show{transform:none;opacity:1}
-.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:200}
-@media(max-width:900px){.links{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;gap:45px;padding-top:115px}.hero-photo{width:min(100%,470px)}.projects{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
-@media(max-width:600px){section{padding:75px 0}.stats{gap:16px;justify-content:space-between}.stat strong{font-size:23px}.stat span{font-size:9px}.projects{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.float{padding:10px 12px}.f1{left:-5px}.f2{right:-5px}.section-head h2{font-size:34px}h1{letter-spacing:-2px}}
+@media(max-width:900px){.links{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;gap:45px;padding-top:115px}.hero-photo{width:min(100%,470px)}.projects{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.update-hero{grid-template-columns:1fr}}
+@media(max-width:600px){section{padding:75px 0}.stats{gap:16px;justify-content:space-between}.stat strong{font-size:23px}.projects{grid-template-columns:1fr}.form-grid,.ach-grid{grid-template-columns:1fr}.float{padding:10px 12px}.f1{left:-5px}.f2{right:-5px}.section-head h2{font-size:34px}h1{letter-spacing:-2px}}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
 <div class="announce" id="announceBar"><div class="container announce-inner" id="announceText"></div></div>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#"><span class="logo">D</span><span>Deepak <span class="gradient">Kumar<span>Thakur</span></span></span></a>
-    <nav class="links">
-      <a href="#about">About</a><a href="#company">PikaGo_World</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
-    </nav>
-    <div class="actions"><button class="icon-btn" id="theme" title="Theme">☾</button><button class="menu-btn" id="menu">☰</button></div>
-  </div>
-</header>
-
+<header class="nav"><div class="container nav-inner">
+<a class="brand" href="#"><span class="logo">D</span><span>Deepak <span class="gradient">Kumar Thakur</span></span></a>
+<nav class="links"><a href="#about">About</a><a href="#company">PikaGo_World</a><a href="#updates">Updates</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></nav>
+<div class="actions"><button class="icon-btn" id="theme">☾</button><button class="menu-btn" id="menu">☰</button></div>
+</div></header>
 <main>
-<section class="hero">
-  <div class="container" style="display:contents">
-    <div class="hero-copy reveal">
-      <span class="eyebrow"></i> PikaGo_World Personal Portfolio</span>
-      <h1>Building ideas into <span class="gradient">digital experiences.</span></h1>
-      <p class="lead">I'm <b>Deepak Kumar Thakur</b> — <span id="typing" class="typing"></span><br>Focused on modern web development, product building and the PikaGo_World ecosystem.</p>
-      <div class="cta"><a class="btn primary" href="#projects">Explore My Work →</a><a class="btn secondary" href="#contact">Let's Connect</a></div>
-      <div class="stats">
-        <div class="stat"><strong>2026</strong><span>Current Focus</span></div>
-        <div class="stat"><strong>BCA</strong><span>Developer</span></div>
-        <div class="stat"><strong>∞</strong><span>Ideas</span></div>
-      </div>
-    </div>
-    <div class="hero-photo reveal">
-      <div class="photo-wrap"><img src="deepak-office.png" alt="Deepak Kumar Thakur"></div>
-      <div class="float f1"><small>FOCUS</small><b>Build • Learn • Improve</b></div>
-      <div class="float f2"><small>PROJECT</small><b>PikaGo_World</b></div>
-    </div>
-  </div>
-</section>
+<section class="hero"><div class="container" style="display:contents">
+<div class="hero-copy reveal"><span class="eyebrow" id="profileTitle"><span class="dot"></span>PikaGo_World Personal Portfolio</span>
+<h1>Building ideas into <span class="gradient">digital experiences.</span></h1>
+<p class="lead">I'm <b id="profileName">Deepak Kumar Thakur</b> — <span id="typing" class="typing"></span><br>Focused on modern web development, product building and the PikaGo_World ecosystem.</p>
+<div class="cta"><a class="btn primary" href="#projects">Explore My Work →</a><a class="btn secondary" href="#contact">Let's Connect</a></div>
+<div class="stats"><div class="stat"><strong>2026</strong><span>Current Focus</span></div><div class="stat"><strong>BCA</strong><span>Developer</span></div><div class="stat"><strong>∞</strong><span>Ideas</span></div></div>
+</div>
+<div class="hero-photo reveal"><div class="photo-wrap"><img id="profilePhoto" src="deepak-office.png" alt="Deepak Kumar Thakur"></div><div class="float f1"><small>FOCUS</small><b>Build • Learn • Improve</b></div><div class="float f2"><small>PROJECT</small><b>PikaGo_World</b></div></div>
+</div></section>
 
-<section id="about">
- <div class="container">
-  <div class="section-head reveal"><span class="kicker">About Me</span><h2>Developer mindset. Entrepreneur vision.</h2><p>A cleaner, more realistic profile section — without exaggerated percentage claims.</p></div>
-  <div class="grid2">
-   <article class="card reveal"><h3>Who I Am</h3><p>I'm Deepak Kumar Thakur, a BCA student and technology enthusiast working on practical software and web projects. I enjoy turning ideas into clean interfaces and useful products.</p><div class="pills"><span class="pill">Web Development</span><span class="pill">JavaScript</span><span class="pill">Firebase</span><span class="pill">UI/UX</span></div></article>
-   <article class="card reveal"><h3>My Current Stack</h3>
-    <div class="skill"><div class="skill-top"><span>HTML / CSS</span><span>90%</span></div><div class="bar"><div class="fill" data-w="90"></div></div></div>
-    <div class="skill"><div class="skill-top"><span>JavaScript</span><span>82%</span></div><div class="bar"><div class="fill" data-w="82"></div></div></div>
-    <div class="skill"><div class="skill-top"><span>Firebase / APIs</span><span>78%</span></div><div class="bar"><div class="fill" data-w="78"></div></div></div>
-   </article>
-  </div>
- </div>
-</section>
+<section id="about"><div class="container"><div class="section-head reveal"><span class="kicker">About Me</span><h2>Developer mindset. Entrepreneur vision.</h2><p id="aboutLead">A practical profile built around software, web development and product ideas.</p></div>
+<div class="grid2"><article class="card reveal"><h3>Who I Am</h3><p id="aboutText">I'm Deepak Kumar Thakur, a BCA student and technology enthusiast working on practical software and web projects.</p><div class="pills"><span class="pill">Web Development</span><span class="pill">JavaScript</span><span class="pill">Firebase</span><span class="pill">UI/UX</span></div></article>
+<article class="card reveal"><h3>My Current Stack</h3><p>HTML / CSS • JavaScript • Firebase • APIs • Responsive UI</p></article></div></div></section>
 
-<section id="company">
- <div class="container">
-  <article class="card company reveal">
-   <span class="kicker">Official Venture</span><h2 style="font-size:42px;margin:10px 0">PikaGo_World</h2>
-   <p style="max-width:800px;color:var(--muted);line-height:1.8">A personal technology ecosystem focused on building practical digital products, web experiences and software ideas. This section is intentionally flexible so new products can be added later.</p>
-   <div class="pills"><span class="pill">Product Building</span><span class="pill">Web Apps</span><span class="pill">Cloud & Firebase</span><span class="pill">Creative Tech</span></div>
-  </article>
- </div>
-</section>
+<section id="company"><div class="container"><article class="card company reveal"><span class="kicker">Official Venture</span><h2 style="font-size:42px;margin:10px 0">PikaGo_World</h2><p id="companyText" style="max-width:800px">A personal technology ecosystem focused on building practical digital products, web experiences and software ideas.</p><div class="pills"><span class="pill">Product Building</span><span class="pill">Web Apps</span><span class="pill">Cloud & Firebase</span><span class="pill">Creative Tech</span></div></article></div></section>
 
-<section id="updates"><div class="container"><div class="section-head reveal"><span class="kicker">Live Updates</span><h2>What's happening at PikaGo_World.</h2><p>Published updates and announcements appear here automatically from the Admin Panel.</p></div><div id="updatesGrid" class="grid2"></div></div></section>
+<section id="updates"><div class="container"><div class="section-head reveal"><span class="kicker">Live Updates</span><h2>What's happening at PikaGo_World.</h2><p>Published from the Admin Panel.</p></div><div id="updatesGrid" class="grid2"></div></div></section>
 
-<section id="projects">
- <div class="container">
-  <div class="section-head reveal"><span class="kicker">Selected Work</span><h2>Projects that can grow with you.</h2><p>Use the filters to dynamically sort the portfolio.</p></div>
-  <div class="project-toolbar reveal"><div class="filters" id="filters"></div><span style="color:var(--muted);font-size:13px" id="count"></span></div>
-  <div class="projects" id="projectsGrid"></div>
- </div>
-</section>
+<section id="projects"><div class="container"><div class="section-head reveal"><span class="kicker">Selected Work</span><h2>Projects that can grow with you.</h2><p>Projects are loaded directly from Firebase.</p></div><div class="project-toolbar"><div class="filters" id="filters"></div><span style="color:var(--muted);font-size:13px" id="count"></span></div><div class="projects" id="projectsGrid"></div></div></section>
 
-<section id="journey">
- <div class="container">
-  <div class="section-head reveal"><span class="kicker">Journey</span><h2>Learning, building, improving.</h2></div>
-  <div class="timeline">
-   <div class="event reveal"><span class="date">2024</span><h3>Started BCA journey</h3><p>Building a stronger foundation in computer applications and software development.</p></div>
-   <div class="event reveal"><span class="date">2026</span><h3>PikaGo_World projects</h3><p>Working on web applications, Firebase-based systems and product ideas.</p></div>
-   <div class="event reveal"><span class="date">NOW</span><h3>Next step: ship more</h3><p>Turning experiments into polished, usable products and a professional portfolio.</p></div>
-  </div>
- </div>
-</section>
+<section id="journey"><div class="container"><div class="section-head reveal"><span class="kicker">Journey</span><h2>Learning, building, improving.</h2></div><div class="timeline"><div class="event reveal"><span class="date">2024</span><h3>Started BCA journey</h3><p>Building a stronger foundation in computer applications and software development.</p></div><div class="event reveal"><span class="date">2026</span><h3>PikaGo_World projects</h3><p>Working on web applications, Firebase-based systems and product ideas.</p></div><div class="event reveal"><span class="date">NOW</span><h3>Next step: ship more</h3><p>Turning experiments into polished, usable products.</p></div></div></div></section>
 
-<section id="achievements">
- <div class="container">
-  <div class="section-head reveal"><span class="kicker">Achievements</span><h2>Milestones worth mentioning.</h2><p>Published from the Admin Panel — updates automatically.</p></div>
-  <div id="achievementsGrid" class="ach-grid"></div>
- </div>
-</section>
+<section id="achievements"><div class="container"><div class="section-head reveal"><span class="kicker">Achievements</span><h2>Milestones worth mentioning.</h2><p>Published from the Admin Panel.</p></div><div id="achievementsGrid" class="ach-grid"></div></div></section>
 
-<section id="contact">
- <div class="container">
-  <div class="section-head reveal"><span class="kicker">Contact</span><h2>Let's build something useful.</h2><p id="contactLead">Ask a question or share your idea — it will also appear publicly below once submitted.</p></div>
-  <div class="card contact reveal">
-   <form id="contactForm">
-    <div class="form-grid"><div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div><div class="field"><label>Email</label><input id="email" type="email" required placeholder="you@example.com"></div></div>
-    <div class="field"><label>Subject</label><input id="subject" required placeholder="Project / Collaboration"></div>
-    <div class="field"><label>Message</label><textarea id="message" required placeholder="Tell me about your idea..."></textarea></div>
-    <button class="btn primary" style="width:100%">Send Message ✦</button>
-   </form>
-  </div>
-  <div class="section-head reveal" style="margin-top:60px"><span class="kicker">Community Q&A</span><h2>Questions from visitors.</h2><p>Every question submitted above appears here. Once Deepak replies from the Admin Panel, the answer shows up automatically.</p></div>
-  <div id="qaGrid" class="qa-list"></div>
- </div>
-</section>
+<section id="contact"><div class="container"><div class="section-head reveal"><span class="kicker">Contact</span><h2>Let's build something useful.</h2><p id="contactLead">Ask a question or share your idea.</p></div>
+<div class="card contact reveal"><form id="contactForm"><div class="form-grid"><div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div><div class="field"><label>Email</label><input id="email" type="email" required placeholder="you@example.com"></div></div><div class="field"><label>Subject</label><input id="subject" required placeholder="Project / Collaboration"></div><div class="field"><label>Message</label><textarea id="message" required placeholder="Tell me about your idea..."></textarea></div><button class="btn primary" style="width:100%">Send Message ✦</button></form></div>
+<div class="section-head reveal" style="margin-top:60px"><span class="kicker">Community Q&A</span><h2>Questions from visitors.</h2><p>Questions and replies are shown when the Firebase rules allow public reading.</p></div><div id="qaGrid" class="qa-list"></div>
+</div></section>
 </main>
-
 <footer><div class="container footer-inner"><span>© <span id="year"></span> Deepak Kumar Thakur</span><span>PikaGo_World • Built with HTML, CSS & JavaScript</span></div></footer>
 <div class="toast" id="toast"></div>
 
 <script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import{getDatabase,ref,onValue,push,set}from"https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
-const portfolioFirebaseConfig={apiKey:"AIzaSyCmCCq33iV4soviTlquocea_OOgQswdBT0",authDomain:"website-fda50.firebaseapp.com",databaseURL:"https://website-fda50-default-rtdb.firebaseio.com",projectId:"website-fda50",storageBucket:"website-fda50.firebasestorage.app",messagingSenderId:"251383380291",appId:"1:251383380291:web:148a4bb6ccd546e77b57f6"};
-const portfolioApp=initializeApp(portfolioFirebaseConfig,"portfolioSite");
-const db=getDatabase(portfolioApp);
-const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#039;"}[m]));
-const toast=t=>{const x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2600)};
-const roles=["Full Stack Developer","Tech Enthusiast","Product Builder","PikaGo_World Creator"];let ri=0,ci=0,del=false;const typing=document.getElementById("typing");function type(){const w=roles[ri];typing.textContent=del?w.slice(0,--ci):w.slice(0,++ci);if(!del&&ci===w.length){del=true;setTimeout(type,1500);return}if(del&&ci===0){del=false;ri=(ri+1)%roles.length}setTimeout(type,del?45:85)}type();
-const filtersEl=document.getElementById("filters"),grid=document.getElementById("projectsGrid"),count=document.getElementById("count");let projects={},active="All";
-function renderFilters(){const cats=["All",...new Set(Object.values(projects).map(p=>p.cat||"Other"))];filtersEl.innerHTML="";cats.forEach(f=>{const b=document.createElement("button");b.className="filter"+(f===active?" active":"");b.textContent=f;b.onclick=()=>{active=f;renderFilters();renderProjects()};filtersEl.appendChild(b)})}
-function renderProjects(){const list=Object.values(projects).filter(p=>active==="All"|| (p.cat||"Other")===active);count.textContent=list.length+" project"+(list.length!==1?"s":"");grid.innerHTML=list.length?list.map(p=>`<article class="card project reveal show"><div class="project-img">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.name||"Project")}" loading="lazy" onerror="this.parentElement.textContent='${esc(p.icon||"🚀")}'">`:esc(p.icon||"🚀")}</div><div class="project-body"><span class="kicker">${esc(p.cat||"Project")}</span><h3>${esc(p.name||"Untitled Project")}</h3><p>${esc(p.desc||"")}</p><div class="pills">${String(p.tags||"").split(",").filter(Boolean).map(t=>`<span class="pill">${esc(t.trim())}</span>`).join("")}</div></div></article>`).join(""):"<div class='card'><p>No projects published yet.</p></div>"}
-onValue(ref(db,"portfolio_projects"),s=>{projects=s.val()||{};renderFilters();renderProjects()});
-function renderUpdates(data){const arr=Object.values(data||{}).filter(x=>x.active!==false).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));const el=document.getElementById("updatesGrid");if(!arr.length){el.innerHTML='<article class="card update-hero"><div class="update-copy"><span class="kicker">PikaGo_World</span><h3>Welcome to my portfolio.</h3><p>New announcements will appear here from the Admin Panel.</p></div><div class="update-image noimg">✦</div></article>';return}const u=arr[0];el.innerHTML=`<article class="card update-hero"><div class="update-copy"><span class="kicker">Latest Update</span><h3>${esc(u.title||"Update")}</h3><p>${esc(u.description||"")}</p><div class="update-date">${esc(u.date||"")}</div></div><div class="update-image ${u.image?"":"noimg"}">${u.image?`<img src="${esc(u.image)}" alt="${esc(u.title||"Update")}" loading="lazy" onerror="this.parentElement.innerHTML='✦';this.parentElement.classList.add('noimg')">`:"✦"}</div></article>`}
-onValue(ref(db,"portfolio_updates"),s=>renderUpdates(s.val()||{}));
-onValue(ref(db,"portfolio_profile"),snap=>{const p=snap.val()||{};const img=document.querySelector(".hero-photo img");if(img&&p.photo&&p.photo.trim()){img.onerror=()=>{console.warn("Profile photo URL failed to load:",p.photo);img.onerror=null;img.src="deepak-office.png"};img.src=p.photo}const name=document.querySelector(".hero-copy .lead b");if(name&&p.name)name.textContent=p.name;const title=document.querySelector(".hero-copy .eyebrow");if(title&&p.title)title.innerHTML='<span class="dot"></span>'+esc(p.title)});
-function renderAchievements(data){const el=document.getElementById("achievementsGrid");const rows=Object.values(data||{}).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));el.innerHTML=rows.length?rows.map(a=>`<div class="card ach-card reveal show"><div class="ach-icon">🏆</div><div><span class="date">${esc(a.date||"")}</span><h3>${esc(a.title||"Achievement")}</h3><p>${esc(a.description||"")}</p></div></div>`).join(""):`<div class="card"><p>Achievements added from the Admin Panel will appear here.</p></div>`}
-onValue(ref(db,"portfolio_achievements"),s=>renderAchievements(s.val()||{}));
-const qaGrid=document.getElementById("qaGrid");
-function renderQA(data){const rows=Object.values(data||{}).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(0,15);qaGrid.innerHTML=rows.length?rows.map(x=>`<div class="qa-item"><b>${esc(x.name||"Visitor")}</b><p>${esc(x.message||"")}</p>${x.reply?`<div class="qa-answer"><b>Deepak / PikaGo_World:</b><p>${esc(x.reply)}</p></div>`:""}</div>`).join(""):`<div class="card"><p>No questions yet — be the first to ask something above.</p></div>`}
-onValue(ref(db,"portfolio_messages"),s=>renderQA(s.val()||{}));
-onValue(ref(db,"portfolio_settings"),s=>{const st=s.val()||{};if(st.siteName)document.title=st.siteName;const bar=document.getElementById("announceBar"),txt=document.getElementById("announceText");if(st.announcement&&st.announcement.trim()){txt.textContent=st.announcement;bar.classList.add("show")}else{bar.classList.remove("show")}const lead=document.getElementById("contactLead");if(st.contactEmail&&st.contactEmail.trim()){lead.innerHTML=`Ask a question or share your idea — or email me directly at <b>${esc(st.contactEmail)}</b>.`}});
-document.getElementById("contactForm").onsubmit=async e=>{e.preventDefault();const f=e.target;const data={name:f.querySelector("#name").value.trim(),email:f.querySelector("#email").value.trim(),subject:f.querySelector("#subject").value.trim(),message:f.querySelector("#message").value.trim(),date:new Date().toISOString(),status:"pending"};try{await set(push(ref(db,"portfolio_messages")),data);toast("Message sent successfully ✦");f.reset()}catch(err){toast("Could not send message")}};
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");e.target.querySelectorAll?.(".fill").forEach(x=>x.style.width=x.dataset.w+"%")}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(x=>obs.observe(x));
-window.addEventListener("scroll",()=>{const d=document.documentElement;document.getElementById("progress").style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+"%"});
-document.getElementById("theme").onclick=()=>{document.body.classList.toggle("light");document.getElementById("theme").textContent=document.body.classList.contains("light")?"☀":"☾";localStorage.setItem("theme",document.body.classList.contains("light")?"light":"dark")};if(localStorage.getItem("theme")==="light"){document.body.classList.add("light");document.getElementById("theme").textContent="☀"}
-document.getElementById("menu").onclick=()=>{document.querySelector(".links").style.display=document.querySelector(".links").style.display==="flex"?"":"flex";document.querySelector(".links").style.position="absolute";document.querySelector(".links").style.top="76px";document.querySelector(".links").style.left="0";document.querySelector(".links").style.right="0";document.querySelector(".links").style.padding="20px";document.querySelector(".links").style.background="var(--panel)";document.querySelector(".links").style.flexDirection="column"};
-document.getElementById("year").textContent=new Date().getFullYear();
+
+const firebaseConfig={
+ apiKey:"AIzaSyCmCCq33iV4soviTlquocea_OOgQswdBT0",
+ authDomain:"website-fda50.firebaseapp.com",
+ databaseURL:"https://website-fda50-default-rtdb.firebaseio.com",
+ projectId:"website-fda50",
+ storageBucket:"website-fda50.firebasestorage.app",
+ messagingSenderId:"251383380291",
+ appId:"1:251383380291:web:148a4bb6ccd546e77b57f6"
+};
+
+const app=initializeApp(firebaseConfig,"portfolioSiteFixed");
+const db=getDatabase(app);
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+const cacheBust=url=>{if(!url)return "";const sep=url.includes("?")?"&":"?";return url+sep+"v="+Date.now()};
+const toast=t=>{const x=$("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2800)};
+
+function listen(path,callback){
+ try{
+  onValue(ref(db,path),snap=>callback(snap.val()||{}),err=>{
+   console.error("Firebase read failed:",path,err);
+   callback({});
+  });
+ }catch(e){console.error("Firebase listener error:",path,e)}
+}
+
+const roles=["Full Stack Developer","Tech Enthusiast","Product Builder","PikaGo_World Creator"];
+let ri=0,ci=0,del=false;
+function type(){
+ const w=roles[ri];
+ $("typing").textContent=del?w.slice(0,--ci):w.slice(0,++ci);
+ if(!del&&ci===w.length){del=true;return setTimeout(type,1500)}
+ if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+ setTimeout(type,del?45:85);
+}
+type();
+
+let projects={},active="All";
+function renderFilters(){
+ const cats=["All",...new Set(Object.values(projects).map(p=>p.cat||"Other"))];
+ $("filters").innerHTML="";
+ cats.forEach(f=>{
+  const b=document.createElement("button");
+  b.className="filter"+(f===active?" active":"");
+  b.textContent=f;
+  b.onclick=()=>{active=f;renderFilters();renderProjects()};
+  $("filters").appendChild(b);
+ });
+}
+function renderProjects(){
+ const list=Object.values(projects).filter(p=>active==="All"||(p.cat||"Other")===active);
+ $("count").textContent=list.length+" project"+(list.length!==1?"s":"");
+ $("projectsGrid").innerHTML=list.length?list.map(p=>{
+  const image=p.image?`<img src="${esc(cacheBust(p.image))}" alt="${esc(p.name||"Project")}" loading="lazy" onerror="this.style.display='none';this.parentElement.textContent='${esc(p.icon||"🚀")}'">`:esc(p.icon||"🚀");
+  return `<article class="card project"><div class="project-img">${image}</div><div class="project-body"><span class="kicker">${esc(p.cat||"Project")}</span><h3>${esc(p.name||"Untitled Project")}</h3><p>${esc(p.desc||"")}</p><div class="pills">${String(p.tags||"").split(",").filter(Boolean).map(t=>`<span class="pill">${esc(t.trim())}</span>`).join("")}</div></div></article>`;
+ }).join(""):"<div class='card'><p>No projects published yet.</p></div>";
+}
+listen("portfolio_projects",d=>{projects=d;renderFilters();renderProjects()});
+
+function renderUpdates(data){
+ const arr=Object.values(data).filter(x=>x.active!==false).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+ if(!arr.length){$("updatesGrid").innerHTML="<article class='card'><h3>Welcome to my portfolio.</h3><p>New announcements will appear here from the Admin Panel.</p></article>";return}
+ const u=arr[0];
+ $("updatesGrid").innerHTML=`<article class="card update-hero"><div><span class="kicker">Latest Update</span><h3>${esc(u.title||"Update")}</h3><p>${esc(u.description||"")}</p><div class="update-date">${esc(u.date||"")}</div></div><div class="update-image">${u.image?`<img src="${esc(cacheBust(u.image))}" alt="${esc(u.title||"Update")}" onerror="this.style.display='none';this.parentElement.textContent='✦'">`:"✦"}</div></article>`;
+}
+listen("portfolio_updates",renderUpdates);
+
+listen("portfolio_profile",p=>{
+ const name=p.name?.trim();
+ const title=p.title?.trim();
+ const bio=p.bio?.trim();
+ if(name)$("profileName").textContent=name;
+ if(title)$("profileTitle").innerHTML='<span class="dot"></span>'+esc(title);
+ if(bio)$("aboutText").textContent=bio;
+ if(p.photo?.trim()){
+  const img=$("profilePhoto");
+  img.onerror=()=>{img.onerror=null;img.src="deepak-office.png"};
+  img.src=cacheBust(p.photo.trim());
+ }
+});
+
+function renderAchievements(data){
+ const rows=Object.values(data).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+ $("achievementsGrid").innerHTML=rows.length?rows.map(a=>`<div class="card ach-card"><div class="ach-icon">🏆</div><div><span class="date">${esc(a.date||"")}</span><h3>${esc(a.title||"Achievement")}</h3><p>${esc(a.description||"")}</p></div></div>`).join(""):"<div class='card'><p>Achievements added from the Admin Panel will appear here.</p></div>";
+}
+listen("portfolio_achievements",renderAchievements);
+
+listen("portfolio_settings",st=>{
+ if(st.siteName)document.title=st.siteName;
+ if(st.announcement?.trim()){$("announceText").textContent=st.announcement;$("announceBar").classList.add("show")}
+ else $("announceBar").classList.remove("show");
+ if(st.contactEmail?.trim())$("contactLead").innerHTML=`Ask a question or share your idea — or email me directly at <b>${esc(st.contactEmail)}</b>.`;
+});
+
+function renderQA(data){
+ const rows=Object.values(data).filter(x=>x.status==="answered"||x.reply).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(0,15);
+ $("qaGrid").innerHTML=rows.length?rows.map(x=>`<div class="qa-item"><b>${esc(x.name||"Visitor")}</b><p>${esc(x.message||"")}</p><div class="qa-answer"><b>Deepak / PikaGo_World:</b><p>${esc(x.reply||"")}</p></div></div>`).join(""):"<div class='card'><p>No answered questions yet.</p></div>";
+}
+// This listener will work only if Firebase Rules permit public reads.
+// It is intentionally caught so it cannot stop the rest of the website.
+listen("portfolio_messages",renderQA);
+
+$("contactForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+ const f=e.target;
+ const data={
+  name:$("name").value.trim(),
+  email:$("email").value.trim(),
+  subject:$("subject").value.trim(),
+  message:$("message").value.trim(),
+  date:new Date().toISOString(),
+  status:"pending"
+ };
+ try{
+  await set(push(ref(db,"portfolio_messages")),data);
+  toast("Message sent successfully ✦");
+  f.reset();
+ }catch(err){
+  console.error("Message write failed:",err);
+  toast("Message could not be sent. Check Firebase Rules.");
+ }
+});
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>obs.observe(x));
+
+addEventListener("scroll",()=>{
+ const d=document.documentElement;
+ $("progress").style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+"%";
+});
+$("theme").onclick=()=>{document.body.classList.toggle("light");$("theme").textContent=document.body.classList.contains("light")?"☀":"☾";localStorage.setItem("theme",document.body.classList.contains("light")?"light":"dark")};
+if(localStorage.getItem("theme")==="light"){document.body.classList.add("light");$("theme").textContent="☀"}
+$("menu").onclick=()=>{const l=document.querySelector(".links");l.style.display=l.style.display==="flex"?"":"flex";l.style.position="absolute";l.style.top="76px";l.style.left="0";l.style.right="0";l.style.padding="20px";l.style.background="var(--panel)";l.style.flexDirection="column"};
+$("year").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
