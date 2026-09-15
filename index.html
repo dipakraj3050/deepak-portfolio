@@ -35,6 +35,18 @@ section{padding:100px 0}.section-head{text-align:center;max-width:700px;margin:0
 .announce{display:none;position:sticky;top:76px;z-index:99;background:linear-gradient(100deg,var(--a),var(--b),var(--c));color:white}.announce.show{display:block}.announce-inner{padding:10px 0;text-align:center;font-weight:700}.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}.toast{position:fixed;right:20px;bottom:20px;background:#10172c;color:white;border:1px solid var(--line);padding:13px 16px;border-radius:13px;transform:translateY(120px);opacity:0;transition:.3s;z-index:200}.toast.show{transform:none;opacity:1}.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:200}
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 @media(max-width:900px){.links{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;gap:45px;padding-top:115px}.hero-photo{width:min(100%,470px)}.projects{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.updates-grid{grid-template-columns:1fr}.ach-grid{grid-template-columns:repeat(2,1fr)}}
+.lock-modal{position:fixed;inset:0;z-index:600;background:rgba(2,4,14,.75);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.lock-modal.show{display:flex}
+.lock-modal-card{width:min(380px,100%);text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px 26px;backdrop-filter:blur(20px);box-shadow:0 30px 100px #0008}
+.lock-modal-card .lock-icon{font-size:36px;margin-bottom:8px}
+.lock-modal-card p{color:var(--muted);font-size:13.5px;line-height:1.6;margin:0 0 16px}
+.lock-modal-card input{margin-bottom:12px;text-align:center}
+.lock-modal-card .lock-err{color:#ff8d8d;font-size:12.5px;min-height:16px;margin-top:10px}
+.project.locked{cursor:pointer;position:relative;isolation:isolate}
+.project.locked .project-img,.project.locked .project-body{filter:blur(2px);opacity:.5}
+.project .lock-overlay{position:absolute;inset:0;background:rgba(5,8,22,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:13px;color:#e7eaff;text-align:center;padding:16px}
+.project .lock-overlay span{font-size:26px}
+body.light .project .lock-overlay{background:rgba(245,247,255,.55);color:#101827}
 @media(max-width:600px){section{padding:75px 0}.stats{gap:16px;justify-content:space-between}.stat strong{font-size:23px}.projects{grid-template-columns:1fr}.form-grid,.ach-grid{grid-template-columns:1fr}.float{padding:10px 12px}.f1{left:-5px}.f2{right:-5px}.section-head h2{font-size:34px}h1{letter-spacing:-2px}}
 
 /* inline-block + plain % widths on purpose — no flex-wrap, no calc().
@@ -67,7 +79,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
 <div class="announce" id="announceBar"><div class="container announce-inner" id="announceText"></div></div>
 <header class="nav"><div class="container nav-inner">
 <a class="brand" href="#"><span class="logo">D</span><span>Deepak <span class="gradient">Kumar Thakur</span></span></a>
-<nav class="links"><a href="#about">About</a><a href="#company">PikaGo_World</a><a href="#updates">Updates</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#achievements">Achievements</a><a href="#selling-sites">Sites</a><a href="#contact">Contact</a></nav>
+<nav class="links"><a href="#about">About</a><a href="#company">PikaGo_World</a><a href="#updates">Updates</a><a href="#projects">Projects</a><a href="#games">Games</a><a href="#journey">Journey</a><a href="#achievements">Achievements</a><a href="#selling-sites">Sites</a><a href="#contact">Contact</a></nav>
 <div class="actions"><button class="icon-btn" id="theme">☾</button><button class="menu-btn" id="menu">☰</button></div>
 </div></header>
 <main>
@@ -89,7 +101,14 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
 
 <section id="updates"><div class="container"><div class="section-head reveal"><span class="kicker">Live Updates</span><h2>What's happening at PikaGo_World.</h2><p>Published from the Admin Panel.</p></div><div id="updatesGrid" class="updates-grid"></div></div></section>
 
-<section id="projects"><div class="container"><div class="section-head reveal"><span class="kicker">Selected Work</span><h2>Projects that can grow with you.</h2><p>Projects are loaded directly from Firebase.</p></div><div class="project-toolbar"><div class="filters" id="filters"></div><span style="color:var(--muted);font-size:13px" id="count"></span></div><div class="projects" id="projectsGrid"></div></div></section>
+<section id="projects"><div class="container"><div class="section-head reveal"><span class="kicker">Selected Work</span><h2>Projects that can grow with you.</h2><p>Projects are loaded directly from Firebase.</p></div>
+<div class="project-toolbar"><div class="filters" id="filters"></div><span style="color:var(--muted);font-size:13px" id="count"></span></div>
+<div class="projects" id="projectsGrid"></div>
+</div></section>
+
+<section id="games"><div class="container"><div class="section-head reveal"><span class="kicker">Play &amp; Try</span><h2>Games from PikaGo_World.</h2><p>Games are loaded directly from Firebase.</p></div>
+<div class="projects" id="gamesGrid"></div>
+</div></section>
 
 <section id="journey"><div class="container"><div class="section-head reveal"><span class="kicker">Journey</span><h2>Learning, building, improving.</h2></div><div class="timeline"><div class="event reveal"><span class="date">2024</span><h3>Started BCA journey</h3><p>Building a stronger foundation in computer applications and software development.</p></div><div class="event reveal"><span class="date">2026</span><h3>PikaGo_World projects</h3><p>Working on web applications, Firebase-based systems and product ideas.</p></div><div class="event reveal"><span class="date">NOW</span><h3>Next step: ship more</h3><p>Turning experiments into polished, usable products.</p></div></div></div></section>
 
@@ -131,8 +150,18 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
 <div class="section-head reveal" style="margin-top:60px"><span class="kicker">Community Q&A</span><h2>Questions from visitors.</h2><p>Questions and replies are shown when the Firebase rules allow public reading.</p></div><div id="qaGrid" class="qa-list"></div>
 </div></section>
 </main>
-<footer><div class="container footer-inner"><span>© <span id="year"></span> Deepak Kumar Thakur</span><span>PikaGo_World • Built with HTML, CSS & JavaScript</span></div></footer>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Deepak Kumar Thakur</span><span>Jaitipur, Rampur, Bihar, Bhagalpur — 813222</span><span>PikaGo_World • Built with HTML, CSS & JavaScript</span></div></footer>
 <div class="toast" id="toast"></div>
+<div class="lock-modal" id="lockModal" onclick="if(event.target===this)closeLockModal()">
+ <div class="lock-modal-card">
+  <div class="lock-icon">🔒</div>
+  <h3>Protected Content</h3>
+  <p>Enter the access password to unlock Projects &amp; Games.</p>
+  <input type="password" id="lockModalPass" placeholder="Enter password" onkeydown="if(event.key==='Enter')tryUnlock(this.value)">
+  <button class="btn primary" style="width:100%" onclick="tryUnlock(document.getElementById('lockModalPass').value)">Unlock</button>
+  <div class="lock-err" id="lockModalErr"></div>
+ </div>
+</div>
 
 <script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
@@ -164,6 +193,30 @@ function listen(path,callback){
  }catch(e){console.error("Firebase listener error:",path,e)}
 }
 
+let sitePassword="",unlocked=sessionStorage.getItem("pgw_unlocked")==="1";
+window.openLockModal=()=>{
+ $("lockModalErr").textContent="";
+ $("lockModalPass").value="";
+ $("lockModal").classList.add("show");
+ setTimeout(()=>$("lockModalPass").focus(),50);
+};
+window.closeLockModal=()=>{$("lockModal").classList.remove("show")};
+window.tryUnlock=pass=>{
+ const err=$("lockModalErr");
+ if(err)err.textContent="";
+ if(pass&&pass===sitePassword){
+  unlocked=true;
+  sessionStorage.setItem("pgw_unlocked","1");
+  closeLockModal();
+  renderProjects();
+  renderGames();
+  toast("Unlocked — enjoy ✦");
+ }else if(err){
+  err.textContent="Incorrect password. Try again.";
+ }
+};
+addEventListener("keydown",e=>{if(e.key==="Escape")closeLockModal()});
+
 const roles=["Full Stack Developer","Tech Enthusiast","Product Builder","PikaGo_World Creator"];
 let ri=0,ci=0,del=false;
 function type(){
@@ -192,6 +245,9 @@ function renderProjects(){
  $("count").textContent=list.length+" project"+(list.length!==1?"s":"");
  $("projectsGrid").innerHTML=list.length?list.map(p=>{
   const image=p.image?`<img src="${esc(cacheBust(p.image))}" alt="${esc(p.name||"Project")}" loading="lazy" onerror="this.style.display='none';this.parentElement.textContent='${esc(p.icon||"🚀")}'">`:esc(p.icon||"🚀");
+  if(!unlocked){
+   return `<article class="card project locked" onclick="openLockModal()"><div class="project-img">${image}</div><div class="project-body"><span class="kicker">${esc(p.cat||"Project")}</span><h3>${esc(p.name||"Untitled Project")}</h3><p>${esc(p.desc||"")}</p></div><div class="lock-overlay"><span>🔒</span>Tap to unlock</div></article>`;
+  }
   const linkBtn=p.link?`<a class="btn secondary" style="display:block;text-align:center;width:100%;margin-top:14px" href="${esc(p.link)}" target="_blank" rel="noopener">🔗 Try Live App</a>`:"";
   return `<article class="card project"><div class="project-img">${image}</div><div class="project-body"><span class="kicker">${esc(p.cat||"Project")}</span><h3>${esc(p.name||"Untitled Project")}</h3><p>${esc(p.desc||"")}</p><div class="pills">${String(p.tags||"").split(",").filter(Boolean).map(t=>`<span class="pill">${esc(t.trim())}</span>`).join("")}</div>${linkBtn}</div></article>`;
  }).join(""):"<div class='card'><p>No projects published yet.</p></div>";
@@ -223,7 +279,7 @@ function renderAchievements(data){
  const rows=Object.values(data).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
  $("achievementsGrid").innerHTML=rows.length?rows.map(a=>{
  const image=a.image||a.imageUrl||a.photo||"";
- const media=image?`<div class="ach-media"><img src="${esc(cacheBust(image))}" alt="${esc(a.title||"Achievement")}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class="ach-fallback">🏆</div>'"></div>`:`<div class="ach-media"><div class="ach-fallback">🏆</div></div>`;
+ const media=image?`<div class="ach-media"><img src="${esc(cacheBust(image))}" alt="${esc(a.title||"Achievement")}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class="ach-fallback"></div></div>`:`<div class="ach-media"><div class="ach-fallback">🏆</div></div>`;
  return `<article class="card ach-card">${media}<div class="ach-body"><span class="date">${esc(a.date||"")}</span><h3>${esc(a.title||"Achievement")}</h3><p>${esc(a.description||"")}</p></div></article>`;
 }).join(""):"<div class='card'><p>Achievements added from the Admin Panel will appear here.</p></div>";
 }
@@ -234,7 +290,25 @@ listen("portfolio_settings",st=>{
  if(st.announcement?.trim()){$("announceText").textContent=st.announcement;$("announceBar").classList.add("show")}
  else $("announceBar").classList.remove("show");
  if(st.contactEmail?.trim())$("contactLead").innerHTML=`Ask a question or share your idea — or email me directly at <b>${esc(st.contactEmail)}</b>.`;
+ sitePassword=st.sitePassword||"";
+ if(!sitePassword){unlocked=true;sessionStorage.setItem("pgw_unlocked","1")}
+ renderProjects();
+ renderGames();
 });
+
+let games={};
+function renderGames(){
+ const list=Object.values(games);
+ $("gamesGrid").innerHTML=list.length?list.map(g=>{
+  const image=g.image?`<img src="${esc(cacheBust(g.image))}" alt="${esc(g.title||"Game")}" loading="lazy" onerror="this.style.display='none';this.parentElement.textContent='🎮'">`:"🎮";
+  if(!unlocked){
+   return `<article class="card project locked" onclick="openLockModal()"><div class="project-img">${image}</div><div class="project-body"><h3>${esc(g.title||"Untitled Game")}</h3></div><div class="lock-overlay"><span>🔒</span>Tap to unlock</div></article>`;
+  }
+  const linkBtn=g.link?`<a class="btn secondary" style="display:block;text-align:center;width:100%;margin-top:14px" href="${esc(g.link)}" target="_blank" rel="noopener">▶ Play Now</a>`:"";
+  return `<article class="card project"><div class="project-img">${image}</div><div class="project-body"><h3>${esc(g.title||"Untitled Game")}</h3>${linkBtn}</div></article>`;
+ }).join(""):"<div class='card'><p>No games published yet.</p></div>";
+}
+listen("portfolio_games",d=>{games=d;renderGames()});
 
 function renderQA(data){
  const rows=Object.values(data).filter(x=>x.status==="answered"||x.reply).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(0,15);
