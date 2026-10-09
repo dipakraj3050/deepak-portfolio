@@ -86,6 +86,7 @@
     }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -99,7 +100,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #08080c;
+            background: #050506;
             color: #ffffff;
             line-height: 1.7;
         }
@@ -116,8 +117,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(8, 8, 12, 0.95);
-            border-bottom: 1px solid #22222b;
+            background: rgba(5, 5, 6, 0.96);
+            border-bottom: 1px solid #1e1e22;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -130,7 +131,7 @@
         }
 
         .logo span {
-            color: #8b5cf6;
+            color: #fcc43a;
         }
 
         .nav-links {
@@ -146,18 +147,18 @@
         }
 
         .nav-links a:hover {
-            color: #a78bfa;
+            color: #ffd666;
         }
 
         .home-btn {
             padding: 9px 17px;
-            border: 1px solid #8b5cf6;
+            border: 1px solid #fcc43a;
             border-radius: 8px;
             color: #ffffff !important;
         }
 
         .home-btn:hover {
-            background: #8b5cf6;
+            background: #fcc43a;
         }
 
         /* Hero */
@@ -169,8 +170,8 @@
             text-align: center;
             padding: 80px 20px;
             background:
-                radial-gradient(circle at top, rgba(139, 92, 246, 0.20), transparent 45%),
-                #08080c;
+                radial-gradient(circle at top, rgba(252, 196, 58, 0.20), transparent 45%),
+                #050506;
         }
 
         .hero-content {
@@ -180,7 +181,7 @@
         .badge {
             display: inline-block;
             padding: 7px 15px;
-            border: 1px solid #33333e;
+            border: 1px solid #3a3a41;
             border-radius: 50px;
             color: #b8b8c5;
             font-size: 13px;
@@ -194,7 +195,7 @@
         }
 
         .hero h1 span {
-            color: #a78bfa;
+            color: #ffd666;
         }
 
         .hero p {
@@ -220,7 +221,7 @@
         }
 
         .section-title span {
-            color: #a78bfa;
+            color: #ffd666;
         }
 
         .section-text {
@@ -233,9 +234,9 @@
         .founder-card {
             margin-top: 35px;
             padding: 35px;
-            border: 1px solid #292933;
+            border: 1px solid #202024;
             border-radius: 18px;
-            background: #101016;
+            background: #0b0b0d;
         }
 
         .founder-card h3 {
@@ -244,7 +245,7 @@
         }
 
         .founder-role {
-            color: #a78bfa;
+            color: #ffd666;
             font-weight: bold;
             margin-bottom: 15px;
         }
@@ -263,15 +264,15 @@
 
         .service-card {
             padding: 28px;
-            background: #101016;
-            border: 1px solid #292933;
+            background: #0b0b0d;
+            border: 1px solid #202024;
             border-radius: 16px;
             transition: 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: #8b5cf6;
+            border-color: #fcc43a;
         }
 
         .service-card h3 {
@@ -288,8 +289,8 @@
         .vision-box {
             margin-top: 30px;
             padding: 35px;
-            border-left: 3px solid #8b5cf6;
-            background: #101016;
+            border-left: 3px solid #fcc43a;
+            background: #0b0b0d;
             border-radius: 0 15px 15px 0;
         }
 
@@ -311,14 +312,14 @@
             display: inline-block;
             padding: 12px 24px;
             border-radius: 9px;
-            background: #8b5cf6;
+            background: #fcc43a;
             color: white;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .contact-btn:hover {
-            background: #7c3aed;
+            background: #e6a800;
             transform: translateY(-2px);
         }
 
@@ -326,13 +327,13 @@
         footer {
             text-align: center;
             padding: 30px 20px;
-            border-top: 1px solid #22222b;
+            border-top: 1px solid #1e1e22;
             color: #777783;
             font-size: 14px;
         }
 
         footer strong {
-            color: #a78bfa;
+            color: #ffd666;
         }
 
         /* Mobile */
@@ -371,10 +372,45 @@
                 padding: 25px;
             }
         }
+    
+        /* ===== yellow theme + animated hero ===== */
+        body{font-family:Poppins,Arial,sans-serif;background:radial-gradient(ellipse at 50% 0,#111113,transparent 60%),#050506}
+        nav{background:rgba(5,5,6,.94)}
+        .home-btn:hover{color:#111!important}
+        .contact-btn{color:#111}
+        .hero{position:relative;overflow:hidden;background:none}
+        .hero-content{position:relative;z-index:2}
+        .hero-content>*{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+        .hero-content>*:nth-child(2){animation-delay:.1s}.hero-content>*:nth-child(3){animation-delay:.2s}
+        @keyframes rise{from{opacity:0;transform:translateY(20px)}}
+        .hero h1{font-weight:800}
+        .hero-art{position:absolute;inset:0;z-index:1;pointer-events:none}
+        .tri{position:absolute;width:var(--w);aspect-ratio:1.1;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(150deg,rgba(252,196,58,.8),rgba(252,196,58,.1) 40%,rgba(252,196,58,.55));animation:tfloat 8s ease-in-out infinite}
+        .tri::before{content:"";position:absolute;inset:2px;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(150deg,#363639,#0b0b0c)}
+        .t1{--w:70px;left:12%;top:16%}.t2{--w:98px;right:8%;top:40%;animation-delay:-3s}.t3{--w:86px;left:-1%;bottom:-6%;rotate:25deg;animation-delay:-5s}
+        .cube{position:absolute;width:var(--w);height:var(--w);background:linear-gradient(135deg,#2d2d30,#09090a);border:1px solid rgba(255,255,255,.08);rotate:20deg;animation:tfloat 9s ease-in-out infinite}
+        .c1{--w:40px;left:9%;bottom:14%}.c2{--w:30px;right:12%;bottom:10%;animation-delay:-4s}
+        @keyframes tfloat{50%{translate:0 -16px}}
+        .dots{position:absolute;width:112px;height:72px;background:radial-gradient(#fcc43a 2.2px,transparent 2.7px) 0 0/16px 16px;animation:dpulse 3.2s ease-in-out infinite}
+        .d1{left:5%;top:54%}.d2{right:5%;top:16%;animation-delay:-1.6s}
+        @keyframes dpulse{50%{opacity:.2}}
+        .lines{position:absolute;width:120px;height:170px;background:repeating-linear-gradient(115deg,#fcc43a 0 2px,transparent 2px 15px);-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent);animation:lshine 4.5s ease-in-out infinite}
+        .l1{left:17%;top:0}.l2{right:16%;bottom:0;rotate:180deg;animation-delay:-2.2s}
+        @keyframes lshine{50%{opacity:.25;translate:10px 8px}}
+        .sd{position:absolute;width:7px;height:7px;border-radius:50%;background:#fcc43a;animation:tfloat 6s ease-in-out infinite}
+        @media(max-width:700px){.t2,.d1,.c2{display:none}.tri{--w:56px}.lines{width:80px;height:110px}}
+        @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+    
+        /* ===== page-wide design ===== */
+        body{position:relative;overflow-x:clip}
+        .page-art{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:.75}
+        .hero,section,footer{position:relative;z-index:1}
+        @media(max-width:700px){.page-art{opacity:.5}.tri{--w:54px!important}.lines{width:80px;height:110px}}
     </style>
 </head>
 
 <body>
+    <div class="page-art" aria-hidden="true"><i class="tri" style="--w:70px;left:10%;top:6%;animation-delay:-0.0s;rotate:-10deg"></i><i class="tri" style="--w:90px;right:7%;top:17%;animation-delay:-1.3s;rotate:27deg"></i><i class="tri" style="--w:60px;left:4%;top:36%;animation-delay:-2.6s;rotate:14deg"></i><i class="tri" style="--w:84px;right:10%;top:52%;animation-delay:-3.9000000000000004s;rotate:1deg"></i><i class="tri" style="--w:70px;left:12%;top:68%;animation-delay:-5.2s;rotate:38deg"></i><i class="tri" style="--w:96px;right:5%;top:82%;animation-delay:-6.5s;rotate:25deg"></i><i class="tri" style="--w:64px;left:46%;top:94%;animation-delay:-7.800000000000001s;rotate:12deg"></i><i class="cube" style="--w:38px;left:6%;top:12%;animation-delay:-0.0s"></i><i class="cube" style="--w:30px;right:14%;top:29%;animation-delay:-1.7s"></i><i class="cube" style="--w:36px;left:9%;top:45%;animation-delay:-3.4s"></i><i class="cube" style="--w:32px;right:8%;top:64%;animation-delay:-5.1s"></i><i class="cube" style="--w:40px;left:14%;top:88%;animation-delay:-6.8s"></i><i class="dots" style="left:4%;top:24%;animation-delay:-0.0s"></i><i class="dots" style="right:5%;top:9%;animation-delay:-0.9s"></i><i class="dots" style="right:4%;top:41%;animation-delay:-1.8s"></i><i class="dots" style="left:6%;top:58%;animation-delay:-2.7s"></i><i class="dots" style="right:6%;top:74%;animation-delay:-3.6s"></i><i class="dots" style="left:5%;top:90%;animation-delay:-4.5s"></i><i class="lines" style="left:16%;top:0%;rotate:0deg;animation-delay:-0.0s"></i><i class="lines" style="right:15%;top:30%;rotate:180deg;animation-delay:-1.1s"></i><i class="lines" style="left:18%;top:55%;rotate:0deg;animation-delay:-2.2s"></i><i class="lines" style="right:18%;top:72%;rotate:180deg;animation-delay:-3.3000000000000003s"></i><i class="lines" style="left:20%;top:82%;rotate:0deg;animation-delay:-4.4s"></i><i class="sd" style="left:30%;top:8%;animation-delay:-0.0s"></i><i class="sd" style="left:78%;top:14%;animation-delay:-0.8s"></i><i class="sd" style="left:60%;top:26%;animation-delay:-1.6s"></i><i class="sd" style="left:20%;top:33%;animation-delay:-2.4000000000000004s"></i><i class="sd" style="left:88%;top:44%;animation-delay:-3.2s"></i><i class="sd" style="left:42%;top:51%;animation-delay:-4.0s"></i><i class="sd" style="left:12%;top:62%;animation-delay:-4.800000000000001s"></i><i class="sd" style="left:70%;top:69%;animation-delay:-5.6000000000000005s"></i><i class="sd" style="left:34%;top:77%;animation-delay:-6.4s"></i><i class="sd" style="left:90%;top:86%;animation-delay:-7.2s"></i><i class="sd" style="left:55%;top:91%;animation-delay:-8.0s"></i><i class="sd" style="left:8%;top:97%;animation-delay:-8.8s"></i></div>
 
     <!-- Navigation -->
     <nav>
